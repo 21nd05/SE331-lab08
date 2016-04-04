@@ -1,11 +1,10 @@
 package camt.se331.shoppingcart.entity;
 
 import javax.persistence.*;
-import javax.xml.crypto.Data;
 import java.util.Date;
 
 /**
- * Created by Family on 29/3/2559.
+ * Created by pan on 3/29/2016.
  */
 @Entity
 public class Image {
@@ -18,8 +17,17 @@ public class Image {
     byte[] content;
     String contentType;
 
-    public Image() {
 
+    public Image() {
+    }
+
+
+    public Date getCreated() {
+        return created;
+    }
+
+    public void setCreated(Date created) {
+        this.created = created;
     }
 
     public Long getId() {
@@ -29,6 +37,7 @@ public class Image {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     public String getFileName() {
         return fileName;
@@ -52,14 +61,6 @@ public class Image {
 
     public void setContentType(String contentType) {
         this.contentType = contentType;
-    }
-
-    public Date getCreated() {
-        return created;
-    }
-
-    public void setCreated(Date created) {
-        this.created = created;
     }
 
     @Temporal(TemporalType.TIME)
